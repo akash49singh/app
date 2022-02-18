@@ -40,7 +40,7 @@ if not st.sidebar.checkbox("Hide", True, key='1'):
                         go.Bar(name='Deaths', x=df['State/UnionTerritory'][:5], y=df['Deaths'][:5])])
                         st.plotly_chart(fig)
 
-df2 = pd.read_csv(r'C:\Users\HP\Desktop\me\STREAMLIT\covid_india.csv')
+df2 = pd.read_csv('covid_india.csv')
 df2['Date'] =  df2['Date'].astype('datetime64[ns]')
 select1 = st.sidebar.selectbox('Select', ['Confirmed', 'Cured'], key='2')
 if not st.sidebar.checkbox("Hide", True, key='3'):
