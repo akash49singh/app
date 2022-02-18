@@ -11,12 +11,12 @@ import plotly
 import plotly.graph_objects as go
 
 
-app = dash.Dash(__name__)
-server = app.server
-app.config.suppress_callback_exceptions = True
-app.title = 'COVID-19'
+#app = dash.Dash(__name__)
+#server = app.server
+#app.config.suppress_callback_exceptions = True
+#app.title = 'COVID-19'
 
-dash_colors = {
+#dash_colors = {
     'background': '#ffffff',
     'text': '#BEBEBE',
     'grid': '#333333',
