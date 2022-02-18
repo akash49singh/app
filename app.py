@@ -21,7 +21,7 @@ st.title("Real-Time / Live Data Science Dashboard")
 
 # top-level filters 
 
-State/UnionTerritory_filter = st.selectbox("Select the state", pd.unique(df['State/UnionTerritory']))
+state_filter = st.selectbox("Select the state", pd.unique(df['State/UnionTerritory']))
 
 
 # creating a single-element container.
