@@ -26,7 +26,7 @@ st.sidebar.title("Visualization Selector")
 st.sidebar.markdown("Select the Charts/Plots accordingly:")
 
 select = st.sidebar.selectbox('Visualization type', ['Bar plot', 'Pie chart'], key='1')
-if not st.sidebar.checkbox("Hide", False, key='1'):
+if not st.sidebar.checkbox("Hide", True, key='1'):
     if select == 'Pie chart':
                         st.title("Selected top 5 States")
                         fig = px.pie(df, values=df["Confirmed"][:5], names=df["State/UnionTerritory"][:5], title="Total Confirmed Cases")
@@ -40,10 +40,10 @@ if not st.sidebar.checkbox("Hide", False, key='1'):
                         go.Bar(name='Deaths', x=df['State/UnionTerritory'][:5], y=df['Deaths'][:5])])
                         st.plotly_chart(fig)
 
-df2 = pd.read_csv('covid_india.csv')
+df2 = pd.read_csv(r'C:\Users\HP\Desktop\me\STREAMLIT\covid_india.csv')
 df2['Date'] =  df2['Date'].astype('datetime64[ns]')
 select1 = st.sidebar.selectbox('Select', ['Confirmed', 'Cured'], key='2')
-if not st.sidebar.checkbox("Hide", False, key='3'):
+if not st.sidebar.checkbox("Hide", True, key='3'):
     if select1 == 'Confirmed':
         fig = px.line(df2, x="Date", y="Confirmed")
         st.plotly_chart(fig)
@@ -52,7 +52,7 @@ if not st.sidebar.checkbox("Hide", False, key='3'):
         st.plotly_chart(fig)
 
 select2 = st.sidebar.selectbox('Select', ['Confirmed', 'Cured'], key='3')
-if not st.sidebar.checkbox("Hide", False, key='4'):
+if not st.sidebar.checkbox("Hide", True, key='4'):
     if select2 == 'Confirmed':
         fig = px.area(df2, x="Date", y="Confirmed")
         st.plotly_chart(fig)
