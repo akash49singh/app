@@ -40,7 +40,7 @@ for seconds in range(200):
     df['Deaths'] = df['Deaths'] * np.random.choice(range(1,5))
 
     # creating KPIs 
-    avg_age = np.mean(df['Confirmed']) 
+   #avg_age = np.mean(df['Confirmed']) 
 
     count_married = int(df[(df["Cured"]=='Cured')]['Cured'].count() + np.random.choice(range(1,30)))
     
