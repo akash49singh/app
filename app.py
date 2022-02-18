@@ -26,7 +26,7 @@ st.sidebar.title("Visualization Selector")
 st.sidebar.markdown("Select the Charts/Plots accordingly:")
 
 select = st.sidebar.selectbox('Visualization type', ['Bar plot', 'Pie chart'], key='1')
-if not st.sidebar.checkbox("Hide", false, key='1'):
+if not st.sidebar.checkbox("Hide", False, key='1'):
     if select == 'Pie chart':
                         st.title("Selected top 5 States")
                         fig = px.pie(df, values=df["Confirmed"][:5], names=df["State/UnionTerritory"][:5], title="Total Confirmed Cases")
