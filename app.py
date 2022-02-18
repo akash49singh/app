@@ -43,7 +43,7 @@ if not st.sidebar.checkbox("Hide", False, key='1'):
 df2 = pd.read_csv('covid_india.csv')
 df2['Date'] =  df2['Date'].astype('datetime64[ns]')
 select1 = st.sidebar.selectbox('Select', ['Confirmed', 'Cured'], key='2')
-if not st.sidebar.checkbox("Hide", false, key='3'):
+if not st.sidebar.checkbox("Hide", False, key='3'):
     if select1 == 'Confirmed':
         fig = px.line(df2, x="Date", y="Confirmed")
         st.plotly_chart(fig)
@@ -52,7 +52,7 @@ if not st.sidebar.checkbox("Hide", false, key='3'):
         st.plotly_chart(fig)
 
 select2 = st.sidebar.selectbox('Select', ['Confirmed', 'Cured'], key='3')
-if not st.sidebar.checkbox("Hide", True, key='4'):
+if not st.sidebar.checkbox("Hide", False, key='4'):
     if select2 == 'Confirmed':
         fig = px.area(df2, x="Date", y="Confirmed")
         st.plotly_chart(fig)
