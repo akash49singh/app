@@ -42,7 +42,7 @@ if not st.sidebar.checkbox("Hide", False, key='1'):
 
 df2 = pd.read_csv('covid_india.csv')
 df2['Date'] =  df2['Date'].astype('datetime64[ns]')
-select1 = st.sidebar.selectbox('Select', ['Confirmed', 'Cured', 'Deaths'], key='2')
+select1 = st.sidebar.selectbox('Select', ['Confirmed', 'Cured'], key='2')
 if not st.sidebar.checkbox("Hide", False, key='3'):
     if select1 == 'Confirmed':
         fig = px.line(df2, x="Date", y="Confirmed")
