@@ -29,7 +29,7 @@ placeholder = st.empty()
 
 # dataframe filter 
 
-df = df[df['State/UnionTerritory']==State/UnionTerritory_filter]
+df = df[df['State/UnionTerritory']==state_filter]
 
 # near real-time / live feed simulation 
 
